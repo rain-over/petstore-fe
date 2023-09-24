@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f4f4f4;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.pet-availability {
+  display: flex;
+  flex-direction: column;
+}
+.pet-availability:first-child {
+  padding-right: 20px;
+}
+
+.pet-card-list {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Styling for individual items in grid view */
+.pet-card {
+  flex: 0 0 calc(33.33% - 20px); /* 3 items per row, with gap */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.pet-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.pet-filter {
+  display: flex;
+  padding: 30px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.pet-filter h1 {
+  font-size: 28px;
+  font-weight: 300;
+  flex: 1;
+}
+
+.pet-ribbon {
+  width: 60px;
+  font-size: 14px;
+  padding: 4px;
+  position: absolute;
+  right: -25px;
+  top: -12px;
+  text-align: center;
+  border-radius: 25px;
+  transform: rotate(20deg);
+  background-color: #ff9800;
+  color: white;
+}
+
+.pet-ribbon-bird {
+  background-color: #ea5a52;
+}
+.pet-ribbon-cat {
+  background-color: #ffd939;
+}
+.pet-ribbon-dog {
+  background-color: #a05838;
+}
+.pet-ribbon-fish {
+  background-color: #2864f0;
+}
+.pet-ribbon-insect {
+  background-color: #293939;
+}
+
+.pet-status {
+  display: flex;
+  align-self: flex-end;
+}
+
+.pet-status label {
+  color: #666;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 2em;
+  text-transform: uppercase;
+}
+
+.pet-status select {
+  /* margin-left: 10px; */
+}
+
+@media (max-width: 1024px) {
+  .text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .text {
+    font-size: 16px;
+  }
+}
