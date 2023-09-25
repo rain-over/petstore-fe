@@ -33,24 +33,35 @@ code {
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
-/* Styling for individual items in grid view */
 .pet-card {
-  flex: 0 0 calc(33.33% - 20px); /* 3 items per row, with gap */
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 5px;
+  display: flex;
+  flex: 0 0 calc(20% - 20px);
+  flex-direction: column;
   padding: 10px;
-  text-align: center;
-  margin-bottom: 20px;
+  margin: 10px 10px 20px;
   position: relative;
+  overflow: hidden;
+  text-align: center;
 }
 
 .pet-card img {
   max-width: 100%;
   height: auto;
+}
+
+.pet-details {
+}
+
+.pet-details h2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
 }
 
 .pet-filter {
@@ -62,38 +73,45 @@ code {
 }
 .pet-filter h1 {
   font-size: 28px;
-  font-weight: 300;
+  font-weight: 500;
   flex: 1;
+  font-family: monospace;
 }
 
 .pet-ribbon {
-  width: 60px;
-  font-size: 14px;
-  padding: 4px;
-  position: absolute;
-  right: -25px;
-  top: -12px;
-  text-align: center;
-  border-radius: 25px;
-  transform: rotate(20deg);
-  background-color: #ff9800;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 40px solid red;
   color: white;
+  font-size: 20px;
+  height: 0px;
+  line-height: 47px;
+  padding: 5px;
+  position: absolute;
+  right: -35px;
+  top: -2px;
+  text-align: center;
+  text-indent: -3px;
+  transform: rotate(45deg);
+  width: 116px;
 }
 
 .pet-ribbon-bird {
-  background-color: #ea5a52;
+  border-bottom-color: #ea5a52;
 }
 .pet-ribbon-cat {
-  background-color: #ffd939;
+  border-bottom-color: #ffb43b;
+  text-indent: 3px;
 }
 .pet-ribbon-dog {
-  background-color: #a05838;
+  border-bottom-color: #a05838;
 }
 .pet-ribbon-fish {
-  background-color: #2864f0;
+  border-bottom-color: #2864f0;
 }
 .pet-ribbon-insect {
-  background-color: #293939;
+  border-bottom-color: #293939;
+  text-indent: -12px;
 }
 
 .pet-status {
@@ -114,8 +132,17 @@ code {
 }
 
 @media (max-width: 1024px) {
-  .text {
-    font-size: 16px;
+  .pet-card {
+    flex: 0 0 calc(15% - 20px); /* 3 items per row, with gap */
+  }
+  .pet-ribbon {
+    width: 40px;
+    font-size: 12px;
+    padding: 4px;
+    border-radius: 25px;
+    line-height: 12px;
+    right: -15px;
+    top: -10px;
   }
 }
 

@@ -45,9 +45,11 @@ const App: React.FC = () => {
         .toString()
     );
 
-    const sorted: Pet[] = pets.sort((a, b) => {
+    let sorted: Pet[] = [...pets];
+
+    sorted = sorted.sort((a, b) => {
       return sort === 'name-a'
-        ? a.name.localeCompare(b.name)
+        ? b.name.localeCompare(b.name)
         : b.name.localeCompare(a.name);
     });
     setPets(sorted);

@@ -25,7 +25,7 @@ const PetCard: React.FC<{ pet: Pet }> = ({ pet }, key) => {
         }}
       />
       <div className="pet-details">
-        <h2>{pet.name}</h2>
+        <h2 title={pet.name}>{pet.name}</h2>
       </div>
       <span className={`pet-ribbon pet-ribbon-${pet.category}`}>
         {pet.category}
